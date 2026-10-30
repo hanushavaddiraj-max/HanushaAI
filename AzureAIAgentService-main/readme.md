@@ -1,0 +1,1 @@
+![Alt text](https://raw.githubusercontent.com/kuljotSB/AzureAIAgentService/refs/heads/main/Assets/azure_ai_agent.png)

@@ -1,0 +1,11 @@
+{
+    "mcpServers": {
+        "weather": {
+            "command": "python",
+            "args": [
+                "/ABSOLUTE/PATH/TO/PARENT/FOLDER/weather_server.py",
+                "weather.py"
+            ]
+        }
+    }
+}

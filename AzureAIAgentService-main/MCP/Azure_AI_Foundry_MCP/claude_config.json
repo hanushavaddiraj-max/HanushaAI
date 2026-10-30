@@ -1,0 +1,14 @@
+{
+    "mcpServers": {
+        "Azure AI Agent(s) Server": {
+            "command": "python",
+            "args": [
+                "/ABSOLUTE/PATH/TO/PARENT/FOLDER/AAI_server.py",
+                "AAI_server.py"
+            ],
+            "env":{
+                "PROJECT_CONNECTION_STRING": "YOUR_PROJECT_CONNECTION_STRING"
+            }
+        }
+    }
+}

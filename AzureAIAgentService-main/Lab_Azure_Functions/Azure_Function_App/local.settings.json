@@ -1,0 +1,9 @@
+{
+    "IsEncrypted": false,
+    "Values": {
+      "FUNCTIONS_WORKER_RUNTIME": "python",
+      "STORAGE_CONNECTION__queueServiceUri": "https://YOUR_STORAGE_ACCOUNT_NAME.queue.core.windows.net",
+      "PROJECT_CONNECTION_STRING": "YOUR_AI_PROJECT_CONNECTION_STRING",
+      "AzureWebJobsStorage": "UseDevelopmentStorage=true"
+      }
+  }

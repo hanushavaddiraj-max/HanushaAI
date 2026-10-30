@@ -1,0 +1,24 @@
+.headingDiv{
+    display : flex;
+    background-color: black;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+   
+}
+
+.azureIcon{
+    width:auto;
+    height:auto;
+    border-radius: 50%;
+    
+
+}
+
+.heading{
+    
+    align-content: center;
+    color: white;
+    
+}
+
