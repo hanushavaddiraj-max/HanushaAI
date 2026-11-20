@@ -1,0 +1,77 @@
+[
+  {
+    "id": "sql_high_risk",
+    "type": "sql",
+    "question": "Show the highest-risk transactions with fraud probability above 0.9",
+    "expect_tools": ["get_high_risk_transactions"],
+    "expect_rag": false
+  },
+  {
+    "id": "sql_txn_details",
+    "type": "sql",
+    "question": "Get transaction details for transaction_id 100001",
+    "expect_tools": ["get_transaction_details"],
+    "expect_rag": false
+  },
+  {
+    "id": "sql_prediction",
+    "type": "sql",
+    "question": "What is the fraud score and model version for transaction 100001?",
+    "expect_tools": ["get_model_prediction_metadata"],
+    "expect_rag": false
+  },
+  {
+    "id": "sql_customer_history",
+    "type": "sql",
+    "question": "Show recent transaction history for client_id 42",
+    "expect_tools": ["get_customer_transaction_history"],
+    "expect_rag": false
+  },
+  {
+    "id": "sql_risk_evidence",
+    "type": "sql",
+    "question": "What risk evidence exists for transaction 100001?",
+    "expect_tools": ["get_transaction_risk_evidence"],
+    "expect_rag": false
+  },
+  {
+    "id": "rag_confirmed_fraud",
+    "type": "rag",
+    "question": "What steps should I take before marking confirmed_fraud?",
+    "expect_tools": ["retrieve_investigation_knowledge"],
+    "expect_rag": true,
+    "expect_source_substrings": ["investigation_checklist", "hitl_status"]
+  },
+  {
+    "id": "rag_hitl_statuses",
+    "type": "rag",
+    "question": "Explain the meaning of HITL statuses open, in_review, cleared, confirmed_fraud, and escalated",
+    "expect_tools": ["retrieve_investigation_knowledge"],
+    "expect_rag": true,
+    "expect_source_substrings": ["hitl_status"]
+  },
+  {
+    "id": "rag_mcc",
+    "type": "rag",
+    "question": "How should I interpret high-risk MCC and amount heuristics?",
+    "expect_tools": ["retrieve_investigation_knowledge"],
+    "expect_rag": true,
+    "expect_source_substrings": ["mcc_risk"]
+  },
+  {
+    "id": "rag_report_sop",
+    "type": "rag",
+    "question": "What sections belong in an investigation report draft?",
+    "expect_tools": ["retrieve_investigation_knowledge"],
+    "expect_rag": true,
+    "expect_source_substrings": ["report_writing"]
+  },
+  {
+    "id": "rag_never_automate",
+    "type": "rag",
+    "question": "Can the agent automatically block a card?",
+    "expect_tools": ["retrieve_investigation_knowledge"],
+    "expect_rag": true,
+    "expect_source_substrings": ["investigation_checklist"]
+  }
+]

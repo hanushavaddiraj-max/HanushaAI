@@ -1,0 +1,26 @@
+command: [
+  "uvicorn",
+  "server.app:app"
+]
+env:
+  - name: 'MLFLOW_EXPERIMENT_ID'
+    value: '249321997071556'
+  - name: 'FRAUD_CATALOG'
+    value: 'dev'
+  - name: 'GOLD_SCHEMA'
+    value: 'fraud_gold'
+  - name: 'ML_SCHEMA'
+    value: 'fraud_ml'
+  - name: 'FRAUDSHIELD_SCHEMA'
+    value: 'fraudshield'
+  - name: 'DATABRICKS_SQL_WAREHOUSE_ID'
+    value: '852a24c1d2cc3003'
+  - name: 'FRAUD_TOOL_MAX_ROWS'
+    value: '50'
+  # RAG: Vector Search (local knowledge/ fallback if VS unavailable)
+  - name: 'FRAUDSHIELD_EMBEDDING_ENDPOINT'
+    value: 'databricks-gte-large-en'
+  - name: 'FRAUDSHIELD_VS_ENDPOINT'
+    value: 'fraudshield-vs'
+  - name: 'FRAUDSHIELD_VS_INDEX'
+    value: 'dev.fraudshield.knowledge_vs_index'
